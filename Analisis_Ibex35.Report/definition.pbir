@@ -1,10 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/main/item-schemas/report/definition.pbir-1.0.json",
-  "version": "1.0",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
+  "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Analisis_Ibex35.SemanticMode"
-    },
-    "byConnection": null
+      "path": "../Analisis_Ibex35.SemanticModel"
+    }
   }
 }

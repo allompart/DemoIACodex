@@ -1,0 +1,120 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+    "name":  "c1d2e3f4a5b607182930",
+    "position":  {
+                     "x":  308,
+                     "y":  24,
+                     "z":  1000,
+                     "height":  672,
+                     "width":  948,
+                     "tabOrder":  1
+                 },
+    "visual":  {
+                   "visualType":  "lineChart",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "cotizaciones"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "date"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "cotizaciones.date",
+                                                                                             "nativeQueryRef":  "date"
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Aggregation":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "Column":  {
+                                                                                                                                                          "Expression":  {
+                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                               "Entity":  "cotizaciones"
+                                                                                                                                                                                           }
+                                                                                                                                                                         },
+                                                                                                                                                          "Property":  "close"
+                                                                                                                                                      }
+                                                                                                                                       },
+                                                                                                                        "Function":  1
+                                                                                                                    }
+                                                                                                },
+                                                                                      "queryRef":  "Average(cotizaciones.close)",
+                                                                                      "nativeQueryRef":  "Promedio de close",
+                                                                                      "displayName":  "Cierre medio"
+                                                                                  }
+                                                                              ]
+                                                          },
+                                                    "Series":  {
+                                                                   "projections":  [
+                                                                                       {
+                                                                                           "field":  {
+                                                                                                         "Column":  {
+                                                                                                                        "Expression":  {
+                                                                                                                                           "SourceRef":  {
+                                                                                                                                                             "Entity":  "cotizaciones"
+                                                                                                                                                         }
+                                                                                                                                       },
+                                                                                                                        "Property":  "yahoo_ticker"
+                                                                                                                    }
+                                                                                                     },
+                                                                                           "queryRef":  "cotizaciones.yahoo_ticker",
+                                                                                           "nativeQueryRef":  "yahoo_ticker"
+                                                                                       }
+                                                                                   ]
+                                                               }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Column":  {
+                                                                                                      "Expression":  {
+                                                                                                                         "SourceRef":  {
+                                                                                                                                           "Entity":  "cotizaciones"
+                                                                                                                                       }
+                                                                                                                     },
+                                                                                                      "Property":  "date"
+                                                                                                  }
+                                                                                   },
+                                                                         "direction":  "Ascending"
+                                                                     }
+                                                                 ]
+                                                    }
+                             },
+                   "objects":  {
+
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027EvoluciÃƒÂ³n del cierre\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "filterConfig":  {
+                         "filters":  [
+
+                                     ]
+                     }
+}
