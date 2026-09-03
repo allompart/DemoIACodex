@@ -1,0 +1,36 @@
+﻿name,bme_ticker,yahoo_ticker,isin,sector
+ACS,ACS,ACS.MC,ES0167050915,Construccion
+Acerinox,ACX,ACX.MC,ES0132105018,Acero
+Amadeus IT Group,AMS,AMS.MC,ES0109067019,Tecnologia turismo
+Acciona,ANA,ANA.MC,ES0125220311,Construccion energia
+Acciona Energia,ANE,ANE.MC,ES0105563003,Energia renovable
+AENA,AENA,AENA.MC,ES0105046009,Infraestructura aeroportuaria
+BBVA,BBVA,BBVA.MC,ES0113211835,Banca
+Banco Sabadell,SAB,SAB.MC,ES0113860A34,Banca
+Bankinter,BKT,BKT.MC,ES0113679I37,Banca
+CaixaBank,CABK,CABK.MC,ES0140609019,Banca
+Cellnex Telecom,CLNX,CLNX.MC,ES0105066007,Telecomunicaciones
+Colonial,COL,COL.MC,ES0139140174,Inmobiliario
+Endesa,ELE,ELE.MC,ES0130670112,Energia
+Enagas,ENG,ENG.MC,ES0130960018,Energia
+Ferrovial,FER,FER.MC,NL0015001FS8,Infraestructura
+Fluidra,FDR,FDR.MC,ES0137650018,Industria
+Grifols,GRF,GRF.MC,ES0171996087,Farmaceutico
+IAG,IAG,IAG.MC,ES0177542018,Aerolineas
+Iberdrola,IBE,IBE.MC,ES0144580Y14,Energia
+Inditex,ITX,ITX.MC,ES0148396007,Textil retail
+Indra,IDR,IDR.MC,ES0118594417,Tecnologia defensa
+Logista,LOG,LOG.MC,ES0105027009,Logistica
+Mapfre,MAP,MAP.MC,ES0124244E34,Seguros
+Merlin Properties,MRL,MRL.MC,ES0105025003,Inmobiliario
+ArcelorMittal,MTS,MTS.MC,LU1598757687,Acero
+Naturgy,NTGY,NTGY.MC,ES0116870314,Energia
+Puig Brands,PUIG,PUIG.MC,ES0105777017,Consumo
+Redeia,RED,RED.MC,ES0173093024,Energia infraestructura
+Repsol,REP,REP.MC,ES0173516115,Energia petroleo gas
+Laboratorios Rovi,ROVI,ROVI.MC,ES0157261019,Farmaceutico
+Sacyr,SCYR,SCYR.MC,ES0182870214,Construccion concesiones
+Banco Santander,SAN,SAN.MC,ES0113900J37,Banca
+Solaria,SLR,SLR.MC,ES0165386014,Energia renovable
+Telefonica,TEF,TEF.MC,ES0178430E18,Telecomunicaciones
+Unicaja Banco,UNI,UNI.MC,ES0180907000,Banca

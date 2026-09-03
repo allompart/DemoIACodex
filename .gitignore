@@ -1,0 +1,13 @@
+﻿# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Data outputs
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+
+# Local env
+.env
