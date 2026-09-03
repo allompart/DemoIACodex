@@ -1,0 +1,76 @@
+﻿{
+  "name": "Analisis_Ibex35",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "es-ES",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-ES",
+    "tables": [
+      {
+        "name": "cotizaciones",
+        "columns": [
+          { "name": "yahoo_ticker", "dataType": "string", "sourceColumn": "yahoo_ticker" },
+          { "name": "bme_ticker", "dataType": "string", "sourceColumn": "bme_ticker" },
+          { "name": "name", "dataType": "string", "sourceColumn": "name" },
+          { "name": "date", "dataType": "dateTime", "sourceColumn": "date", "formatString": "Short Date" },
+          { "name": "open", "dataType": "decimal", "sourceColumn": "open", "formatString": "#,0.00" },
+          { "name": "high", "dataType": "decimal", "sourceColumn": "high", "formatString": "#,0.00" },
+          { "name": "low", "dataType": "decimal", "sourceColumn": "low", "formatString": "#,0.00" },
+          { "name": "close", "dataType": "decimal", "sourceColumn": "close", "formatString": "#,0.00" },
+          { "name": "adj_close", "dataType": "decimal", "sourceColumn": "adj_close", "formatString": "#,0.00" },
+          { "name": "volume", "dataType": "int64", "sourceColumn": "volume", "formatString": "#,0" }
+        ],
+        "partitions": [
+          {
+            "name": "cotizaciones",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"127.0.0.1,14333\", \"Analisis_Ibex\", [Query=\"SELECT yahoo_ticker, bme_ticker, [name], [date], [open], high, low, [close], adj_close, volume FROM dbo.cotizaciones\"])",
+                "in",
+                "    Source"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "valores",
+        "columns": [
+          { "name": "ticker", "dataType": "string", "sourceColumn": "ticker" },
+          { "name": "rows", "dataType": "int64", "sourceColumn": "rows", "formatString": "#,0" },
+          { "name": "status", "dataType": "string", "sourceColumn": "status" },
+          { "name": "message", "dataType": "string", "sourceColumn": "message" }
+        ],
+        "partitions": [
+          {
+            "name": "valores",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"127.0.0.1,14333\", \"Analisis_Ibex\", [Query=\"SELECT ticker, rows, status, message FROM dbo.valores\"])",
+                "in",
+                "    Source"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"cotizaciones\",\"valores\"]"
+      }
+    ]
+  }
+}
